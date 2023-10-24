@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="presentation.css" />
     <title>LH Cosmetics</title>
   </head>
   <body>
@@ -11,9 +12,9 @@
       <h1>LH Cosmetics</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="tutorials/index.html">Tutorials</a></li>
-          <li><a href="about/index.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="about.html">Home</a></li>
         </ul>
       </nav>
     </header>
@@ -28,34 +29,48 @@
             fliken tutorials, eller läs veckans how to´s nedanför.
           </p>
           <img
-            src="pics/cosmetics-7050541_1280 (kopia).jpeg"
+            src="pictures/cosmetics-7050541_1280.jpeg"
             alt="Picture of makeup"
           />
         </section>
       </div>
-      <div id="artiklar">
-        <article>
-          <img
-            src="pics/makeup-739672_1280 (kopia)"
-            alt="Eye close up of model wearing false eyelashes"
-          />
-          <h2>How To Apply False Eyelashes</h2>
-          <p>
-            Discover how to apply false eyelashes to make your eyes stand out.
-          </p>
-          <a href="länk här till en sida">Read More</a>
+      <div id="how-to">
+        <article class="card">
+          <div class="card-pic">
+            <img
+              src="pictures/lipstick-7459434_1280.webp"
+              alt="Eye close up of model wearing false eyelashes"
+            />
+          </div>
+          <div class="card-content">
+            <h2>How To Apply False Eyelashes</h2>
+            <p>
+              Discover how to apply false eyelashes to make your eyes stand out.
+            </p>
+            <div class="card-button">
+              <a href="länk här till en sida">Read More</a>
+            </div>
+          </div>
         </article>
-        <article>
-          <img
-            src="pics/makeup-739672_1280 (kopia)"
-            alt="Eye close up of model wearing false eyelashes"
-          />
-          <h2>How To Apply False Eyelashes</h2>
-          <p>
-            Discover how to apply false eyelashes to make your eyes stand out.
-          </p>
-          <a href="länk här till en sida">Read More</a>
+
+        <article class="card">
+            <div class="card-pic">
+                <img
+                  src="pictures/lipstick-7459434_1280.webp"
+                  alt="Eye close up of model wearing false eyelashes"
+                />
+            </div>
+            <div class="card-content">
+                <h2>How To Apply False Eyelashes</h2>
+                <p>
+                    Discover how to apply false eyelashes to make your eyes stand out.
+                </p>
+                <div class="card-button">
+                    <a href="länk här till en sida">Read More</a>
+                </div>
+            </div>
         </article>
+        
       </div>
     </main>
 
