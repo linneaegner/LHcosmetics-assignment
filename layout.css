@@ -1,7 +1,83 @@
-
-
-#how-to {
-    display: flex;
-    flex-wrap: wrap;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /*nollställ all margin
+  margin: 0;*/
 }
 
+body {
+  /*I webbläsarens inbyggda CSS ligger det redan en margin på body, vi tar bort den så att header och footer når hela vägen ut till kanten av webbläsarfönstret*/
+  margin: 0;
+}
+
+main {
+    width: 90%;
+    /*5rem bilr i det här fallet uppåt och neråt medans auto som är autojusterande marginaler (centrerat) blir höger och vänster*/
+    margin: 5rem auto;
+    padding: 1rem;
+}
+
+
+
+footer {
+    display: flex; /* Add this line to make the footer a flex container */
+    height: 15rem;
+    padding: 2rem;
+    position: relative;
+    justify-content: center; /* This will center items horizontally */
+    align-items: end; /* This will center items vertically */
+}
+
+footer p {
+  position: absolute;
+}
+
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.article-card {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed */
+    margin: 10px; /* Add some margin for spacing */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.article-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.article-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.article-description {
+    margin: 10px 0;
+}
+
+read-more-button {
+    margin: 10px 0;
+}
