@@ -11,6 +11,21 @@ body {
   margin: 0;
 }
 
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
 main {
     width: 90%;
     /*5rem bilr i det här fallet uppåt och neråt medans auto som är autojusterande marginaler (centrerat) blir höger och vänster*/
@@ -38,16 +53,116 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 }
 
+.card {
+    margin: 2rem 1rem;
+    flex: 0 0 calc(33.33% - 2rem); /* Justera bredden efter behov */
+    max-width: 40rem;
+    width: 100%; /* Lägg till en 100% bredd så att korten fyller hela behållaren */
+  }
+  
+  @media (max-width: 900px) {
+    .card {
+      /* Anpassa kortens storlek när skärmen/fönstret är mindre än 900px */
+      flex: 0 0 calc(50% - 2rem); /* 2 kort per rad */
+      max-width: 60rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .card {
+      /* Anpassa kortens storlek när skärmen/fönstret är mindre än 480px */
+      flex: 0 0 calc(100% - 2rem); /* 1 kort per rad */
+      max-width: 80rem;
+    }
+  }
+
+.card .image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%; /* Image container takes up 100% width of the card */
+}
+
+.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.mid {
+    width: 90%; /* Content takes up 80% width of the card */
+    margin: 2rem auto;
+    
+}
+
+.bottom {
+    text-align: center;
+    margin: 6rem auto;
+}
+
+.btn {
+    width: 3rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: chartreuse;
+    padding: 1rem 2rem;
+
+
+}
+
+/* Add a class to the video list for styling */
+.tutorials ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*
+Style for individual video items 
+.video {
+    flex: 0 0 calc(50% - 1rem); /Two videos per row with some spacing in between 
+    max-width: 50%;  Maximum width of a video item 
+    margin-bottom: 2rem;  Add some margin between videos 
+    background-color: aqua;
+}
+
+/Adjust the styling of the iframe 
+.video iframe {
+    width: 100%;  Make the video fill the container 
+    height: auto;  Maintain aspect ratio 
+}
+
+ Additional styling for the video title and description 
+.video h3 {
+    font-size: 7rem;  Adjust the font size for video titles 
+    margin-top: 1rem;  Add spacing between title and video 
+}
+
+.video p {
+    font-size: 1.6rem; Adjust the font size for video descriptions 
+}
+
+
+
+/*
 .article-card {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed */
-    margin: 10px; /* Add some margin for spacing */
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed 
+    margin: 10px; /* Add some margin for spacing 
     box-sizing: border-box;
     text-align: center;
 }
 
-.article-image-container {
+.image-container {
     position: relative;
     width: 100%;
     padding-top: 100%;
@@ -81,3 +196,4 @@ footer p {
 read-more-button {
     margin: 10px 0;
 }
+*/
