@@ -35,18 +35,7 @@ main {
 
 
 
-footer {
-    display: flex; /* Add this line to make the footer a flex container */
-    height: 15rem;
-    padding: 2rem;
-    position: relative;
-    justify-content: center; /* This will center items horizontally */
-    align-items: end; /* This will center items vertically */
-}
 
-footer p {
-  position: absolute;
-}
 
 
 .article-container {
