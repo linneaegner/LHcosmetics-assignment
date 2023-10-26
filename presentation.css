@@ -52,9 +52,17 @@ a {
 
 /*HOW-TO´S hela artikel containern med rubrik, stycke och artiklarna (klass card)*/
 
+.article-container {
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 2rem;
+  object-fit: cover;
+}
 .card > a {
   text-decoration: none;
   color: rgb(0, 0, 0);
+  
 }
 
 .card h3 {

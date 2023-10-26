@@ -41,6 +41,10 @@ main {
   padding: 1rem;
 }
 
+#page-intro {
+    margin-bottom: 6rem;
+}
+
 /*HOW-TO´S hela artikel containern med rubrik, stycke och artiklarna (klass card)*/
 
 .article-container {
@@ -117,6 +121,13 @@ p.centered {
   max-width: 100%; /* Ensure the videos take the full width of their container */
   margin-bottom: 2rem; /* Add some spacing between rows of videos */
   padding: 1rem;
+}
+/*About page*/
+section.about {
+    border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);;
+  border-radius: 25px;
+  padding: 2rem;
 }
 
 /* Footer*/
