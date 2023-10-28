@@ -1,9 +1,9 @@
+
+/*---------------------------Allmänt---------------------------*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  /*nollställ all margin
-  margin: 0;*/
 }
 
 body {
@@ -11,7 +11,7 @@ body {
   margin: 0;
 }
 
-/*Header och Navigation*/
+/*---------------------------Header and navigation---------------------------*/
 header {
   text-align: center;
   padding: 10px;
@@ -30,30 +30,30 @@ nav li {
   /*ändrar The float property specifies whether an element should float to the left, right, or not at all.
   Note: Absolutely positioned elements ignore the float property!
   Note: Elements next to a floating element will flow around it. To avoid this, use the clear property or the clearfix hack (see example at the bottom of this page).
-    float: left; */
+  float: left; */
 }
 
-/*Main*/
+/*---------------------------Main---------------------------*/
 main {
-  width: 90%;
-  /*5rem bilr i det här fallet uppåt och neråt medans auto som är autojusterande marginaler (centrerat) blir höger och vänster*/
-  margin: 5rem auto;
-  padding: 1rem;
-}
-
-#page-intro {
+    width: 90%;
+    /*5rem bilr i det här fallet uppåt och neråt medans auto som är autojusterande marginaler (centrerat) blir höger och vänster*/
+    margin: 5rem auto;
+    padding: 1rem;
+  }
+  
+  section {
     margin-bottom: 6rem;
-}
+    padding: 2rem;
+  }
 
-/*HOW-TO´S hela artikel containern med rubrik, stycke och artiklarna (klass card)*/
-
-.article-container {
+/*---------------------------Start page---------------------------*/
+.flexbox {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 .article-description {
-   padding: 1rem;
+  padding: 1rem;
 }
 .card {
   flex: 0 0 calc(33.33% - 2rem);
@@ -63,19 +63,19 @@ main {
   flex-direction: column; /* Add this */
   justify-content: space-between; /* Add this to push .bottom to the bottom */
   height: 100%;
+  margin: 1rem 1rem 4rem;
 }
 .top {
   width: 100%;
 }
 .mid {
-  width: 100%; /* Content takes up 80% width of the card */
+  width: 100%; /* Content takes up 100% width of the card */
   text-align: center; /* Ta bort sen för han vill inte ha texten centrerad */
-  padding: 1rem;
 }
 
 .bottom {
-  text-align: center;
-  padding: 1rem;
+  width: 100% /* Content takes up 100% width of the card */;
+  text-align: center; /* Ta bort sen för han vill inte ha texten centrerad */
 }
 
 .card .image-container {
@@ -105,32 +105,25 @@ p.centered {
   display: inline; /* Change the display property to inline */
 }
 
-/* Videos på sidan där tutorials skall visas*/
-.tutorials ul {
+/*---------------------------Tutorial page---------------------------*/
+#tutorials ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  list-style: none; /* Remove the list style */
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);;
-  border-radius: 25px;
 }
 
-.tutorials li {
+#tutorials li {
   flex: 0 0 calc(50% - 1rem); /* 2 videos per row, with a little spacing between them */
   max-width: 100%; /* Ensure the videos take the full width of their container */
   margin-bottom: 2rem; /* Add some spacing between rows of videos */
   padding: 1rem;
 }
-/*About page*/
-section.about {
-    border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);;
-  border-radius: 25px;
-  padding: 2rem;
+/*---------------------------About page---------------------------*/
+.creator img {
+  width: fit-content; /*FEL vad ska jag göra*/
 }
 
-/* Footer*/
+/*---------------------------Footer---------------------------*/
 .footer {
   position: relative;
   width: 100%;
@@ -154,8 +147,7 @@ section.about {
   text-align: center;
 }
 
-/*Media Query)*/
-
+/*---------------------------Media Query---------------------------*/
 @media (max-width: 900px) {
   .card {
     /* Anpassa kortens storlek när skärmen/fönstret är mindre än 900px */
@@ -171,74 +163,3 @@ section.about {
     max-width: 80rem;
   }
 }
-
-/*
-Style for individual video items 
-.video {
-    flex: 0 0 calc(50% - 1rem); /Two videos per row with some spacing in between 
-    max-width: 50%;  Maximum width of a video item 
-    margin-bottom: 2rem;  Add some margin between videos 
-    background-color: aqua;
-}
-
-/Adjust the styling of the iframe 
-.video iframe {
-    width: 100%;  Make the video fill the container 
-    height: auto;  Maintain aspect ratio 
-}
-
- Additional styling for the video title and description 
-.video h3 {
-    font-size: 7rem;  Adjust the font size for video titles 
-    margin-top: 1rem;  Add spacing between title and video 
-}
-
-.video p {
-    font-size: 1.6rem; Adjust the font size for video descriptions 
-}
-
-
-
-/*
-.article-card {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed 
-    margin: 10px; /* Add some margin for spacing 
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.article-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.article-content {
-    padding: 10px;
-    text-align: center;
-}
-
-.article-title {
-    font-size: 1.25rem;
-    margin: 0;
-}
-
-.article-description {
-    margin: 10px 0;
-}
-
-read-more-button {
-    margin: 10px 0;
-}
-*/
