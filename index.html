@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="layout.css" />
-    <link rel="stylesheet" href="presentation.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>LH Cosmetics</title>
   </head>
   <body>
@@ -19,106 +18,149 @@
       </nav>
     </header>
 
-          <!--gör span kursivt-->
-
     <main>
       <section id="page-intro">
         <h2>Välkommen till LH Cosmetics Makeup Tutorial World!</h2>
         <p>
-          <span>Här hittar du massor av användbara makeup tips och tricks för att
-          uppnå den perfekta looken.</span> Söker du inspiration och vägledning för att
-          förbättra din makeup-rutin? Då har du kommit helt rätt! På LH
-          Cosmetics makeup tutorial website har vi samlat en guldgruva av
-          kunskap och expertis för att hjälpa dig att ta din makeup till nästa
-          nivå. Oavsett om du är nybörjare eller en erfaren makeup-entusiast,
-          har vi något för dig.
+          <span
+            >Här hittar du massor av användbara makeup tips och tricks för att
+            uppnå den perfekta looken.</span
+          >
+          Söker du inspiration och vägledning för att förbättra din
+          makeup-rutin? Då har du kommit helt rätt! På LH Cosmetics makeup
+          tutorial website har vi samlat en guldgruva av kunskap och expertis
+          för att hjälpa dig att ta din makeup till nästa nivå. Oavsett om du är
+          nybörjare eller en erfaren makeup-entusiast, har vi något för dig.
         </p>
-        <h3>Upptäck Våra Video Tutorials
-        </h3>
-        <p>Under fliken "Tutorials" hittar du en liten samling video tutorials som är utformade för att guida dig steg för steg genom olika makeup-tekniker. Våra makeup-experter delar med sig av sina hemligheter och ger dig de bästa tipsen för att uppnå en professionell look. Oavsett om du vill behärska smokey eyes, contouring, eller skapa den perfekta röda läppen, våra tutorials är här för att hjälpa dig.
-
-          Vi förstår att varje person har sin egen unika stil och sminkpreferens. Därför inkluderar våra tutorials olika looks, från naturlig vardagsmakeup till glamorösa festmakeuper. Du kommer att lära dig användbara tekniker och få insikt i de senaste trenderna inom makeupvärlden.
-          
-          </p>
+        <h3>Upptäck Våra Video Tutorials</h3>
+        <p>
+          Under fliken "Tutorials" hittar du en liten samling video tutorials
+          som är utformade för att guida dig steg för steg genom olika
+          makeup-tekniker. Våra makeup-experter delar med sig av sina
+          hemligheter och ger dig de bästa tipsen för att uppnå en professionell
+          look. Oavsett om du vill behärska smokey eyes, contouring, eller skapa
+          den perfekta röda läppen, våra tutorials är här för att hjälpa dig. Vi
+          förstår att varje person har sin egen unika stil och sminkpreferens.
+          Därför inkluderar våra tutorials olika looks, från naturlig
+          vardagsmakeup till glamorösa festmakeuper. Du kommer att lära dig
+          användbara tekniker och få insikt i de senaste trenderna inom
+          makeupvärlden.
+        </p>
       </section>
 
-      <!--vad menas med loading lazy? och lägg till rätt info i artiklarna-->
-      <section id="how-to" class="flexbox">
-        <div>
-          <h2 class="uppercase">How to´s</h2>
-          <p>
-            Här har vi samlat tre artiklar som vi rekommenderar för läsning
-            denna månaden. Dessa artiklar är utvalda av vårt team av
-            makeup-experter och innehåller de senaste tipsen och trenderna inom
-            skönhet. Från produktrecensioner till steg-för-steg guider, våra How
-            To's ger dig den kunskap du behöver för att skapa fantastiska looks.
-          </p>
+      <section id="how-to" class="articles">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="uppercase">How to´s</h2>
+            <p>
+              här har vi samlat tre artiklar som vi rekommenderar för läsning
+              denna månaden. Dessa artiklar är utvalda av vårt team av
+              makeup-experter och innehåller de senaste tipsen och trenderna
+              inom skönhet. Från produktrecensioner till steg-för-steg guider,
+              våra How To's ger dig den kunskap du behöver för att skapa
+              fantastiska looks.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <a
+                href="https://artdeco.com/blogs/make-up-guides/perfect-eyebrows"
+              >
+                <div class="card-image">
+                  <img src="pictures/eyebrows.jpg" alt="" />
+                </div>
+                <div class="card-text">
+                  <div class="card-title">
+                    <h3>perfect eyebrows</h3>
+                  </div>
+                  <div class="card-description">
+                    <p>
+                      Naturligt buskiga eller dramatiskt framhävda – när det
+                      gäller ögonbryn är nästan allt tillåtet. Den här artikeln
+                      visar dig tre ögonbrynlooks steg för steg.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-btn" >
+                  <button class="uppercase" type="button">läs mer</button>
+                </div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a
+                href="https://www.cosmopolitan.com/style-beauty/beauty/how-to/a6265/makeup-tricks-every-woman-should-know/"
+              >
+                <div class="card-image">
+                  <img src="pictures/putting-on-makeup.jpg" alt="" />
+                </div>
+                <div class="card-text">
+                  <div class="card-title">
+                    <h3>21 makeup tips</h3>
+                  </div>
+                  <div class="card-desctiption">
+                    <p>
+                      Den här artikeln ger dig 21 sminktips som kommer göra ditt
+                      liv 100 gånger enklare.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-btn">
+                  <button type="button">läs mer</button>
+                </div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a href="https://www.ipsy.com/blog/makeup-for-beginners">
+                <div class="card-image">
+                  <img src="pictures/makeup.jpg" alt="" />
+                </div>
+                <div class="card-text">
+                  <div class="card-title">
+                    <h3>Beginner makeup guide</h3>
+                  </div>
+                  <div class="card-desctiption">
+                    <p>
+                      Alla nybörjare inom makeup! Denna expertgodkända
+                      makeup-guide är för dig.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-btn">
+                  <button type="button">läs mer</button>
+                </div>
+              </a>
+            </article>
+
+            <article class="card">
+              <a
+                href="https://www.instyle.com/beauty/makeup/how-to-do-winged-liner"
+              >
+                <div class="card-image">
+                  <img src="pictures/eyeliner.jpg" alt="" />
+                </div>
+                <div class="card-text">
+                  <div class="card-title">
+                    <h3>
+                      Hur du gör en perfekt eyeliner- oavsett din ögonform
+                    </h3>
+                  </div>
+                  <div class="card-desctiption">
+                    <p>
+                      Vill du lära dig att göra perfekt eyeliner? Kolla in denna
+                      steg-för-steg-guide till att skapa den snyggaste looken
+                      någonsin med eyeliner.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-btn">
+                  <button type="button">läs mer</button>
+                </div>
+              </a>
+            </article>
+          </div>
         </div>
-        <article class="card">
-          <a href="">
-            <div class="top">
-              <div class="image-container">
-                <img alt="" loading="lazy" src="pictures/woman-3096664_1280" />
-              </div>
-            </div>
-            <div class="mid">
-              <h3 class="uppercase">Detta är en rubrik för artikeln</h3>
-              <p class="description">
-                Detta är en beskrivning som ska vara tillräckligt lång men
-                absolut inte allt för lång utan
-              </p>
-            </div>
-            <div class="bottom">
-              <p class="btn centered">Read More</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="card">
-          <a href="">
-            <div class="top">
-              <div class="image-container">
-                <img alt="" loading="lazy" src="pictures/woman-3096664_1280" />
-              </div>
-            </div>
-            <div class="mid">
-              <h3>
-                <span class="title">Här är rubrik på artikel nummer två</span>
-              </h3>
-              <p class="description">
-                Detta är en beskrivning som ska vara tillräckligt lång men
-                absolut inte allt för lång utan bara så att man ser hur det ser
-                ut
-              </p>
-            </div>
-            <div class="bottom">
-              <p class="btn centered">Read More</p>
-            </div>
-          </a>
-        </article>
-
-        <article class="card">
-          <a href="">
-            <div class="top">
-              <div class="image-container">
-                <img alt="" loading="lazy" src="pictures/woman-3096664_1280" />
-              </div>
-            </div>
-            <div class="mid">
-              <h3>
-                <span class="title"
-                  >Wow detta är var du hittar rubrik nummer tre</span
-                >
-              </h3>
-              <p class="description">
-                Detta är en beskrivning som ska är kortare
-              </p>
-            </div>
-            <div class="bottom">
-              <p class="btn centered">Read More</p>
-            </div>
-          </a>
-        </article>
       </section>
     </main>
 
