@@ -6,7 +6,7 @@
 }
 
 body {
-  /*I webbläsarens inbyggda CSS ligger det redan en margin på body, vi tar bort den så att header och footer når hela vägen ut till kanten av webbläsarfönstret*/
+  /*Tar bort margin (som finns som default) så att header och footer når hela vägen ut*/
   margin: 0;
 }
 
@@ -47,7 +47,6 @@ nav a:hover {
 /*---------------------------Main---------------------------*/
 main {
   width: 100%;
-  /*5rem bilr i det här fallet uppåt och neråt medans auto som är autojusterande marginaler (centrerat) blir höger och vänster*/
   margin: 4rem auto;
   padding: 2rem;
 }
@@ -76,6 +75,10 @@ h3 {
   font-size: 2rem;
 }
 
+h4 {
+  font-size: 1.8rem;
+}
+
 p,
 a {
   line-height: 1.5;
@@ -97,12 +100,20 @@ a {
 }
 
 h2,
-h3 {
+h3,
+h4 {
   color: rgb(34, 34, 34);
   font-weight: 700;
 }
 
 /*---------------------------Start page---------------------------*/
+.sidenote {
+  font-style: italic;
+  display: block;
+  margin-bottom: 1rem;
+  color: rgb(54, 54, 84);
+}
+
 .card a {
   color: #000000;
 }
@@ -122,14 +133,20 @@ h3 {
 
 .card {
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.15);
-  /*Ta bort? vad är detta för att göra korten till VG betyg?*/
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease-in-out;
 }
 
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  height: 40rem;
+}
 .card-image img {
   width: 100%;
-  max-height: 40rem;
+  height: 100%;
 }
 
 .card-text {
@@ -142,7 +159,8 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.card-btn button {
+.card-btn span{
+  display: inline-block; /*Så att den får visa egenskaper från block vill ju ha padding (och det är ju inline egntl)*/
   padding: 2rem 4rem;
   font-size: 1.6rem;
   background-color: rgb(222, 222, 240);
@@ -150,14 +168,15 @@ h3 {
   color: rgb(39, 35, 50);
 }
 
-.card-btn button:hover {
+.card-btn span:hover {
   background-color: rgb(157, 137, 223);
+  cursor: pointer; /* muspekare test*/
 }
 
 /*---------------------------Tutorial page---------------------------*/
 #tutorials ul {
   list-style: none;
-  padding: 0; /*pga listelement har automatiskt padding till vänster så jag tar bort*/
+  padding: 0; /*pga listelement har automatiskt padding därför det ej var jämnt innan*/
   display: grid;
   gap: 4rem;
   grid-template-columns: 1fr;
@@ -174,9 +193,15 @@ iframe {
 }
 
 /*---------------------------About page---------------------------*/
-.image-container {
-  text-align: center;
-  max-width: 40rem;
+#about .section-head {
+  display: flex;
+  flex-direction: column;
+}
+
+#about .text-container {
+  padding: 2rem;
+}
+#about .image-container {
   margin: 4rem auto;
 }
 
@@ -185,6 +210,23 @@ iframe {
   border-radius: 5px;
 }
 
+.animation {
+  width: 50%;
+  height: 20px;
+  border-radius:25px;
+  position: relative;
+  background-color: rgb(216, 46, 74);
+  animation-name: team;
+  animation-duration: 4s;
+}
+
+@keyframes team {
+  0%   {background-color: rgb(216, 46, 74);left:0px;}
+  25%  {background-color: rgb(216, 46, 171)}
+  50%  {background-color: rgb(171, 46, 216);left:50px}
+  75%  {background-color: rgb(97, 46, 216);left:0px; }
+  100% {background-color: rgb(66, 46, 216);left:0px; }
+}
 /*---------------------------Footer---------------------------*/
 .footer {
   background-image: url(pictures/footer.jpeg);
@@ -198,7 +240,8 @@ iframe {
 }
 
 .footer::before {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255);
+  opacity: 0.5;
   content: "";
   position: absolute;
   top: 0px;
@@ -214,9 +257,23 @@ iframe {
   text-align: center;
 }
 
+/*---------------------------ankarlänk---------------------------*/
+.ankarlänk {
+  display: inline-block;
+  padding: 2rem 4rem;
+  background-color: rgb(116, 79, 236);
+  color: #ffffff;
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  text-transform: uppercase;
+  border-radius: 8px;
+  box-shadow: 0 1rem 1rem rgba(116, 79, 236, 0.2);
+
+}
 /*---------------------------Media Query---------------------------*/
 @media (min-width: 768px) {
-  /* Stilmall för surfplattor, när skärmen är minst 768px och högst 1023px bred */
+  /* surfplatta (eller större)*/
   body {
     font-size: 1.8rem;
   }
@@ -224,14 +281,11 @@ iframe {
   nav li {
     margin: 1rem;
     display: inline;
-      /*ändrar The float property specifies whether an element should float to the left, right, or not at all.
-    Note: Absolutely positioned elements ignore the float property!
-    Note: Elements next to a floating element will flow around it. To avoid this, use the clear property or the clearfix hack (see example at the bottom of this page).
-    float: left; */
+  }
 
   main {
     width: 90%;
-    /*5rem bilr i det här fallet uppåt och neråt medans auto som är autojusterande marginaler (centrerat) blir höger och vänster*/
+    /*Sätter bredden till ej 100%. 6rem upp och ner. Genom auto (autojusterande marginaler) vänster och höger centeras main*/
     margin: 6rem auto;
   }
 
@@ -251,10 +305,19 @@ iframe {
   iframe {
     height: 30rem;
   }
+
+  #about .section-head {
+    flex-direction: row;
+  }
+
+  #about .image-container {
+    margin: 0 auto;
+    margin-top: 6rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  /* Stilmall för datorer, när skärmen är 1024px bred eller bredare */
+  /* dator*/
   body {
     font-size: 1.6rem;
   }
@@ -269,5 +332,4 @@ iframe {
   iframe {
     height: 40rem;
   }
-}
 }
